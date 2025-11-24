@@ -45,25 +45,25 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <a href="https://github.com/mithun-t" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="gap-2 group hover:border-primary hover:text-primary transition-all">
+              <Button variant="outline" size="lg" className="gap-2 group hover:border-primary hover:text-primary hover:bg-primary/10 transition-all">
                 <Github className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 GitHub
               </Button>
             </a>
             <a href="https://linkedin.com/in/mithun-t" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="gap-2 group hover:border-primary hover:text-primary transition-all">
+              <Button variant="outline" size="lg" className="gap-2 group hover:border-primary hover:text-primary hover:bg-primary/10 transition-all">
                 <Linkedin className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 LinkedIn
               </Button>
             </a>
             <a href="mailto:mithunt04@gmail.com">
-              <Button variant="outline" size="lg" className="gap-2 group hover:border-primary hover:text-primary transition-all">
+              <Button variant="outline" size="lg" className="gap-2 group hover:border-primary hover:text-primary hover:bg-primary/10 transition-all">
                 <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 Email
               </Button>
             </a>
             <a href="tel:+919562601187">
-              <Button variant="outline" size="lg" className="gap-2 group hover:border-primary hover:text-primary transition-all">
+              <Button variant="outline" size="lg" className="gap-2 group hover:border-primary hover:text-primary hover:bg-primary/10 transition-all">
                 <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 Call
               </Button>
@@ -82,7 +82,7 @@ const Hero = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="gap-2 hover:border-primary hover:text-primary transition-all"
+                className="gap-2 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all"
               >
                 <Download className="w-5 h-5" />
                 Download Resume
@@ -92,7 +92,7 @@ const Hero = () => {
               onClick={scrollToAbout} 
               variant="outline" 
               size="lg"
-              className="hover:border-primary hover:text-primary transition-all"
+              className="hover:border-primary hover:text-primary hover:bg-primary/10 transition-all"
             >
               Learn More
             </Button>
