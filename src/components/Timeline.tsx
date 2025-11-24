@@ -72,16 +72,16 @@ const timelineData: TimelineItem[] = [
     technologies: [
       "React.js", "TypeScript", "Tailwind CSS", ".NET Core 9",
       "Zustand", "React Query", "Shadcn UI", "Remix",
-      "PostgreSQL", "QuestPDF", "Sadadu Payment Gateway"
+      "PostgreSQL", "QuestPDF", "Razorpay Payment Gateway"
     ],
     achievements: [
-      "Built complete Learning Management System (LMS)",
+      // "Built complete Learning Management System (LMS)",
       "Developed Gym Management System from scratch",
       "Created eCommerce platform with payment integration",
       "Delivered projects ahead of schedule"
     ],
     modules: [
-      "LMS: Dashboard, Study Materials, Examinations, Live Classes",
+      // "LMS: Dashboard, Study Materials, Examinations, Live Classes",
       "GMS: Member & Employee Management, Equipment Tracking, Check-in System",
       "eCommerce: Product Display, Cart, Payment Gateway, Returns Flow, SEO"
     ]

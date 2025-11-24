@@ -7,22 +7,22 @@ const Projects = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   const projects = [
-    {
-      title: "Learning Management System (LMS)",
-      description: "Comprehensive education platform with course management, live classes, and student tracking capabilities",
-      role: "Frontend Developer",
-      techStack: ["React.js", "Tailwind CSS", "React Query", "Zustand"],
-      features: [
-        "Interactive Dashboard with analytics and insights",
-        "Study Materials management and distribution",
-        "Recorded session playback with progress tracking",
-        "Examination and Quiz system with automated grading",
-        "Attendance tracking and reporting",
-        "Watch History for content consumption analytics",
-        "Live class integration with real-time interaction",
-      ],
-      type: "Freelance",
-    },
+    // {
+    //   title: "Learning Management System (LMS)",
+    //   description: "Comprehensive education platform with course management, live classes, and student tracking capabilities",
+    //   role: "Frontend Developer",
+    //   techStack: ["React.js", "Tailwind CSS", "React Query", "Zustand"],
+    //   features: [
+    //     "Interactive Dashboard with analytics and insights",
+    //     "Study Materials management and distribution",
+    //     "Recorded session playback with progress tracking",
+    //     "Examination and Quiz system with automated grading",
+    //     "Attendance tracking and reporting",
+    //     "Watch History for content consumption analytics",
+    //     "Live class integration with real-time interaction",
+    //   ],
+    //   type: "Freelance",
+    // },
     {
       title: "Gym Management System (GMS)",
       description: "Complete gym operations management solution with member tracking, equipment management, and workout planning",
@@ -43,12 +43,12 @@ const Projects = () => {
       title: "eCommerce Web Application",
       description: "Modern e-commerce platform with payment integration and comprehensive shopping features",
       role: "Frontend Developer",
-      techStack: ["Remix", "Tailwind CSS", "Sadadu Payment Gateway"],
+      techStack: ["Remix", "Tailwind CSS", "Razorpay Payment Gateway"],
       features: [
         "Product Display with advanced filtering and sorting",
         "Detailed Product View with image galleries",
         "Shopping Cart with real-time updates",
-        "Payment Integration using Sadadu Gateway",
+        "Payment Integration using Razorpay Gateway",
         "Product Return flow management",
         "Dynamic Home page with featured products",
         "Top deals and Mega Offer sections",

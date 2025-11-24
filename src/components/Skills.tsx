@@ -19,7 +19,7 @@ const Skills = () => {
     },
     {
       title: "Tools & Others",
-      skills: ["Git", "GitHub", "QuestPDF", "ITextSharp", "HMAC Signature", "ABHA Integration", "Sadadu Payment Gateway", "SEO", "Zustand"],
+      skills: ["Git", "GitHub", "QuestPDF", "ITextSharp", "HMAC Signature", "ABHA Integration", "Razorpay Payment Gateway", "SEO", "Zustand"],
     },
   ];
 
