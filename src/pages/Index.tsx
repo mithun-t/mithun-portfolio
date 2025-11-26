@@ -8,6 +8,7 @@ import GitHubStats from "@/components/GitHubStats";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
+import CareerStats from "@/components/CareerStats";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Hero />
       <About />
       <Skills />
+     <CareerStats />
       <Timeline />
       <Projects />
       <Testimonials />
