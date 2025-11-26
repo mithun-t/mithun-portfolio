@@ -43,7 +43,7 @@ const GitHubStats = () => {
           </Card>
 
           {/* Stats Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-1 gap-6">
             {/* Streak Stats */}
             <Card className="p-4 backdrop-blur-sm bg-card/50 border-border/50 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 flex justify-center items-center overflow-hidden">
               <img
@@ -59,16 +59,19 @@ const GitHubStats = () => {
             </Card>
 
             {/* Top Languages */}
+            {/* <Card className="p-4 backdrop-blur-sm bg-card/50 border-border/50 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 flex justify-center items-center overflow-hidden">
+              <img
+                src={`https://github-readme-stats.vercel.app/api?username=mithun-t&show_icons=true&theme=radical`}
+                alt="Top Languages"
+                className="max-w-full h-auto"
+                loading="lazy"
+              />
+            </Card> */}
+            {/* Top Languages */}
             <Card className="p-4 backdrop-blur-sm bg-card/50 border-border/50 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 flex justify-center items-center overflow-hidden">
               <img
-                src={`https://github-readme-stats.vercel.app/api/top-langs/?username=mithun-t&layout=compact&theme=${
-                  theme === "dark" ? "tokyonight" : "default"
-                }&hide_border=true&bg_color=${
-                  theme === "dark" ? "00000000" : "00000000"
-                }&title_color=0ea5e9&icon_color=0ea5e9&text_color=${
-                  theme === "dark" ? "c9d1d9" : "333333"
-                }`}
-                alt="Top Languages"
+                src={`https://github-profile-trophy.vercel.app/?username=mithun-t&theme=radical&margin-w=15&margin-h=15&no-bg=true&no-frame=true`}
+                alt="GitHub Trophies"
                 className="max-w-full h-auto"
                 loading="lazy"
               />
