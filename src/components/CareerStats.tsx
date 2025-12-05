@@ -3,32 +3,74 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { useTheme } from "next-themes";
 import { Briefcase, Code2, Layers, Trophy } from "lucide-react";
+// 1. ADDED: Import Badge for skills display in tooltip
+import { Badge } from "@/components/ui/badge";
 
 const CareerStats = () => {
   const { ref, isVisible } = useScrollAnimation();
   const { theme } = useTheme();
 
-  // Data representing your career growth based on your timeline
+  // 2. MODIFIED: Updated data to include a 'skills' array for the tooltip
   const data = [
-    { year: "2021", level: 30, role: "Junior Dev", label: "Started Journey" },
-    { year: "2022", level: 55, role: "FullStack Web Developer", label: "Fullstack Transition" },
-    { year: "2023", level: 70, role: "Senior Developer", label: "Major Module Delivery" },
-    { year: "2024", level: 95, role: "Team Lead/Freelance", label: "LMS & GMS Projects" },
-    { year: "2025", level: 100, role: "Team Lead/Freelance", label: "Enterprise Solutions" },
+    { 
+      year: "2021", 
+      level: 30, 
+      role: "Software Developer", 
+      label: "Started HMIS Journey (Legacy)", 
+      skills: ["ASP.NET 4.2", "Oracle DB", "jQuery", "Bootstrap", "C#"] // Sourced from Timeline
+    },
+    { 
+      year: "2022", 
+      level: 55, 
+      role: "FullStack Developer", 
+      label: "Transition to Modern Stack", 
+      skills: ["React", "TypeScript", ".NET Core", "SQL Server", "Material UI", "Redux"] // Sourced from Timeline/Experience
+    },
+    { 
+      year: "2023", 
+      level: 70, 
+      role: "Senior FullStack Developer", 
+      label: "Module Lead & Optimization", 
+      skills: ["React Query", "Entity Framework", "QuestPDF", "ABHA Integration", "HMAC Signature"] // Sourced from Timeline
+    },
+    { 
+      year: "2024", 
+      level: 95, 
+      role: "Senior Dev & Freelance", 
+      label: "Independent Projects (GMS/eComm)", 
+      skills: ["Remix", "Tailwind CSS", "PostgreSQL", "Zustand", "Razorpay"] // Sourced from Timeline/Projects
+    },
   ];
 
-  // Custom tooltip for the chart
+  // 3. MODIFIED: Custom tooltip logic to display skills in badges
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
+      const data = payload[0].payload;
+      const skills = data.skills;
+
       return (
-        <div className="bg-popover border border-border p-3 rounded-lg shadow-lg">
-          <p className="font-bold text-foreground mb-1">{label}</p>
-          <p className="text-primary text-sm font-medium">
-            {payload[0].payload.role}
+        <div className="bg-popover border border-border p-3 rounded-lg shadow-lg max-w-xs">
+          <p className="font-bold text-foreground mb-1">Year {label}: {data.role}</p>
+          <p className="text-primary text-sm font-medium mb-3">
+            {data.label}
           </p>
-          <p className="text-muted-foreground text-xs mt-1">
-            {payload[0].payload.label}
-          </p>
+          
+          {skills && skills.length > 0 && (
+            <div className="mt-3 pt-2 border-t border-border/50">
+              <p className="text-xs font-semibold text-muted-foreground mb-2">Key Tech/Skills:</p>
+              <div className="flex flex-wrap gap-1">
+                {skills.map((skill: string) => (
+                  <Badge 
+                    key={skill} 
+                    variant="secondary" 
+                    className="text-xs px-2 py-0.5"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       );
     }
@@ -110,7 +152,7 @@ const CareerStats = () => {
               <CardContent className="flex-1 min-h-[300px] p-0">
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart
-                    data={data}
+                    data={data} // Using the updated data with skills
                     margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
                   >
                     <defs>
@@ -131,6 +173,7 @@ const CareerStats = () => {
                       hide 
                       domain={[0, 110]} 
                     />
+                    {/* MODIFIED: Using the updated CustomTooltip */}
                     <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'hsl(var(--primary))', strokeWidth: 2 }} />
                     <Area
                       type="monotone"
